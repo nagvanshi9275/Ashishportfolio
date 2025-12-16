@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: #3B82F6;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #10B981;
+  --color-accent: #8B5CF6;
+  --color-dark-bg: #09090b;
+  /* Zinc 950 */
+  --color-dark-surface: #18181b;
+  /* Zinc 900 */
+  --color-dark-surface-hover: #27272a;
+  /* Zinc 800 */
+  --color-dark-border: #27272a;
+  /* Zinc 800 */
+  --color-text-primary: #fafafa;
+  /* Zinc 50 */
+  --color-text-secondary: #a1a1aa;
+  /* Zinc 400 */
+  --font-display: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Gradient Backgrounds */
+.gradient-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.gradient-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  @apply bg-dark-surface/40 backdrop-blur-md border border-white/5 rounded-2xl transition-all duration-300;
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply tracking-tight text-white;
+}
+
+/* Premium Buttons */
+.btn-primary {
+  @apply relative overflow-hidden bg-white text-black px-8 py-3.5 rounded-full font-semibold transition-all hover:bg-zinc-200 hover:scale-[1.02] active:scale-95;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary {
+  @apply flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 backdrop-blur-sm;
+}
+
+/* Premium Cards */
+.card {
+  @apply bg-dark-surface/40 backdrop-blur-md border border-white/5 rounded-2xl transition-all duration-300 p-6 md:p-8;
+}
+
+.card-hover {
+  @apply hover:border-white/10 hover:bg-dark-surface-hover/60 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/5;
+}
+
+/* Tech Badge */
+.tech-badge {
+  @apply bg-white/5 border border-white/5 text-text-secondary text-xs font-medium px-3 py-1.5 rounded-full inline-flex items-center backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white mr-2 mb-2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-border rounded-full hover:bg-zinc-600 transition-colors;
+}
+
+::selection {
+  @apply bg-primary/30 text-white;
 }
