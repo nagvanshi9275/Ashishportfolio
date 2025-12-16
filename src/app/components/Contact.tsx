@@ -6,7 +6,7 @@ import { FiMail, FiLinkedin, FiGithub, FiTwitter, FiArrowRight } from "react-ico
 const contactContent = {
   title: "Ready to Build?",
   subtitle: "I'm currently available for select freelance projects and consulting opportunities.",
-  email: "ashish@example.com",
+  email: "aashishsingh24032005@gmail.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/ashish-nagvanshi-a2a944229/",
     github: "https://github.com/nagvanshi9275",
