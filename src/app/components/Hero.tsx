@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const heroContent = {
   name: "Ashish Nagvanshi",
@@ -36,12 +37,16 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary to-accent rounded-full w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-                <span className="text-white text-6xl font-bold">AN</span>
+              <div className="bg-gradient-to-br from-primary to-accent rounded-full w-64 h-64 md:w-80 md:h-80 flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/ashish.jpeg"
+                  alt="Ashish Nagvanshi"
+                  width={320}
+                  height={320}
+                  className="object-cover w-full h-full"
+                />
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-secondary rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
-                <span className="text-dark-bg text-2xl">🚀</span>
-              </div>
+           
             </div>
           </motion.div>
           
