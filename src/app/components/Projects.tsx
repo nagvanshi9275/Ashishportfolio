@@ -70,7 +70,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 relative">
+    <section id="projects" className="py-20 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <motion.div

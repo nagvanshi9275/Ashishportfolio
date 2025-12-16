@@ -18,7 +18,7 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="py-24 bg-dark-bg/50 border-y border-white/5">
+    <section id="tech-stack" className="py-20 md:py-32 bg-dark-bg/50 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.p
           className="text-text-secondary text-sm uppercase tracking-widest mb-12"

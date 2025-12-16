@@ -16,7 +16,7 @@ const contactContent = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 bg-gradient-to-b from-dark-bg to-black relative">
+    <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-dark-bg to-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
